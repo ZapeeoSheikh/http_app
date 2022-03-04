@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http_app/drawer/drawertiles.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -33,38 +34,12 @@ class MyDrawer extends StatelessWidget {
               ),
             ],
           ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.laptop_mac_rounded),
-              title: Text("Account 1"),
-              subtitle: Text("Personal"),
-              trailing: Icon(Icons.edit),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.mail_outline_outlined),
-              title: Text("Email"),
-              subtitle: Text("beingaravian@gmail.com"),
-              trailing: Icon(Icons.edit),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.phone),
-              title: Text("Contact"),
-              subtitle: Text("+923234879062"),
-              trailing: Icon(Icons.edit),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.message_outlined),
-              title: Text("Message"),
-              subtitle: Text("General"),
-              trailing: Icon(Icons.edit),
-            ),
-          ),
+          DrawerTile(Icon(Icons.laptop_mac_rounded), "Account 1", "Personal"),
+          DrawerTile(Icon(Icons.mail_outline_outlined), "Email",
+              "beingaravian@gmail.com"),
+          DrawerTile(Icon(Icons.phone), "Contact", "+923234879062"),
+          DrawerTile(Icon(Icons.message_outlined), "Message", "General"),
+          DrawerTile(Icon(Icons.group), "Groups", "Private"),
         ],
       ),
     );
